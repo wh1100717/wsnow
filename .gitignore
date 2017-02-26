@@ -1,0 +1,10 @@
+.idea
+npm-debug.log
+coverage
+node_modules
+unit_coverage
+typings
+server/**/*.js*
+!server/index.js
+client/**/*.js*
+!client/dev/config.js
