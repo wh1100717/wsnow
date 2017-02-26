@@ -11,4 +11,4 @@
 
 ## Usage
 
-*   `npm dev`
+*   `npm run dev`
