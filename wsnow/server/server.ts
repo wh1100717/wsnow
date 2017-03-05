@@ -14,6 +14,9 @@ import {
   DBConfig
 } from "./config/db.conf"
 import {
+  PassportConfig
+} from "./config/passport.conf"
+import {
   Routes
 } from "./routes"
 
@@ -23,6 +26,9 @@ DBConfig.init()
 // Web Server 初始化
 const app = express()
 ExpressConfig.init(app)
+
+// 初始化Auth
+PassportConfig.init(app)
 
 // 初始化路由
 const router = express.Router()

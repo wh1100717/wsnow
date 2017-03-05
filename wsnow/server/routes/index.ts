@@ -22,7 +22,7 @@ class StaticDispatcher {
 
 export class Routes {
   static init(app: express.Application, router: express.Router) {
-    APIRoutes.init(router)
+    APIRoutes.init(app, router)
 
     router
       .route("*")

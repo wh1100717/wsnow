@@ -8,8 +8,8 @@ import {
 } from "../../utils"
 
 
-class UserController {
-  async list(req: express.Request) {
+export class UserController {
+  static async list(req: express.Request) {
     try {
       const user_list = await userDao.getAll()
       return std_output("success", "", user_list)
@@ -17,7 +17,7 @@ class UserController {
       return std_output("fail", "获取用户列表失败")
     }
   }
-  async create(req: express.Request) {
+  static async create(req: express.Request) {
     try {
       const {
         name,
@@ -47,7 +47,7 @@ class UserController {
       return std_output("fail", "创建用户失败")
     }
   }
-  async get(req: express.Request) {
+  static async get(req: express.Request) {
     try {
       const {
         id
@@ -62,7 +62,7 @@ class UserController {
       return std_output("fail", "获取用户信息失败")
     }
   }
-  async save(req: express.Request) {
+  static async save(req: express.Request) {
     try {
       const {
         id
@@ -96,7 +96,7 @@ class UserController {
       return std_output("fail", "创建/更新用户失败")
     }
   }
-  async delete(req: express.Request) {
+  static async delete(req: express.Request) {
     try {
       const {
         id
@@ -115,5 +115,3 @@ class UserController {
     }
   }
 }
-
-export const userController = new UserController()

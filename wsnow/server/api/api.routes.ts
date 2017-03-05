@@ -4,8 +4,8 @@ import {
 } from "./user/user.route"
 
 export class APIRoutes {
-  static init(router: express.Router) {
+  static init(app: express.Application, router: express.Router) {
     // 用户管理路由
-    UserRoutes.init(router)
+    UserRoutes.init(app, router)
   }
 }
