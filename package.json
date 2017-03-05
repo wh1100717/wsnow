@@ -36,6 +36,7 @@
     "zone.js": "^0.7.7"
   },
   "devDependencies": {
+    "@types/async": "^2.0.38",
     "@types/bluebird": "^3.0.37",
     "@types/body-parser": "^0.0.34",
     "@types/compression": "^0.0.33",
@@ -44,6 +45,7 @@
     "@types/express-serve-static-core": "^4.0.40",
     "@types/helmet": "^0.0.33",
     "@types/jasmine": "^2.5.43",
+    "@types/koa": "^2.0.38",
     "@types/lodash": "^4.6.1",
     "@types/mime": "^0.0.29",
     "@types/mongoose": "^4.7.6",

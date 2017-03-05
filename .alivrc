@@ -2,9 +2,9 @@
     "quiet": true,
     "port": 3000,
     "http2": false,
-    "pathIndex": "client/dev",
+    "pathIndex": "wsnow/client/dev",
     "only": [
-        "client/dev/**/*"
+        "wsnow/client/dev/**/*"
     ],
     "static": [
         "node_modules",
