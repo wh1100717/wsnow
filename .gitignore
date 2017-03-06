@@ -9,3 +9,4 @@ wsnow/server/**/*.js*
 wsnow/client/**/*.js*
 !wsnow/client/dev/config.js
 client
+!wsnow/client/
