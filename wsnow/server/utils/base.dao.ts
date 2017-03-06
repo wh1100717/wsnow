@@ -3,7 +3,7 @@ import * as mongoose from "mongoose"
 export class BaseDao {
   model: mongoose.Model < any >
   constructor(model: mongoose.Model < any > ) {
-      this.model = model
+    this.model = model
   }
   async create(doc) {
     const data = await this.model.create(doc)

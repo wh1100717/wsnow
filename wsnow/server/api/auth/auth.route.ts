@@ -12,7 +12,7 @@ export class AuthRoutes {
       })
     })
 
-    app.route("logout")
+    app.route("/api/logout")
       .get((req, res) => {
         req.logout()
         res.redirect("/login")
@@ -21,5 +21,14 @@ export class AuthRoutes {
         req.logout()
         res.redirect("login")
       })
+    
+    app.route("*").all(async (req, res, next) => {
+      if (req.user) {
+        next()
+      } else {
+        // 如果没有登录则跳转到登录页面
+        res.redirect("/login")
+      }
+    })
   }
 }

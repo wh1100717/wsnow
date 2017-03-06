@@ -22,6 +22,11 @@ class StaticDispatcher {
 
 export class Routes {
   static init(app: express.Application, router: express.Router) {
+    // 登录页面不需要权限验证，因此放在最开始
+    router
+      .route("/login")
+      .get(StaticDispatcher.sendIndex)
+
     APIRoutes.init(app, router)
 
     router
